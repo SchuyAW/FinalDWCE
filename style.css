@@ -1,0 +1,613 @@
+/* General Styles */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(to right, #007bff, #00d2ff); /* Gradient background */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+    color: #c1c1c1 !important;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+}
+
+/* Menu Button Styles */
+.nav-link.dropdown-toggle {
+    padding: 0.75rem 1.5rem; /* Increase padding for larger button */
+    border-radius: 30px; /* Rounded button */
+    background-color: #ffffff; /* White background */
+    color: #007bff !important; /* Primary color for text */
+    font-weight: bold; /* Make text bold */
+    font-size: 1.2rem; /* Slightly larger font size */
+    box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link.dropdown-toggle i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.3rem; /* Slightly larger icon */
+}
+
+.nav-link.dropdown-toggle:hover {
+    background-color: #f0f0f0; /* Slightly darker on hover */
+    transform: scale(1.02); /* Slightly enlarge the button on hover */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border-radius: 10px; /* Rounded corners */
+    border: none; /* Remove default border */
+    box-shadow: 10px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+}
+
+.dropdown-item {
+    padding: 10px 20px; /* Spacing inside dropdown items */
+    font-size: 1rem; /* Standard font size */
+}
+
+.dropdown-item:hover {
+    background-color: #007bff; /* Highlight color on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Comment Section Styles */
+#comments {
+    margin-top: 20px;
+}
+
+.comment-box {
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.comment-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-header .comment-username {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.comment-header .comment-timestamp {
+    font-size: 0.85rem;
+    color: #666;
+    margin-left: auto;
+}
+
+.comment-text {
+    font-size: 1rem;
+}
+
+/* Add this to your style.css file */
+textarea#commentInput {
+    resize: vertical; /* Allows vertical resizing only */
+    min-height: 100px; /* Minimum height for the textarea */
+    max-height: 300px; /* Maximum height for the textarea */
+    border-radius: 0.25rem; /* Rounded corners for consistency with Bootstrap */
+    padding: 0.75rem; /* Padding inside the textarea */
+    border: 1px solid #ced4da; /* Border color to match Bootstrap */
+    font-size: 1rem; /* Font size for better readability */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for better visual appearance */
+}
+
+
+/* Style for comment boxes */
+.comment-box:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.comment-box:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)),
+                url("https://via.placeholder.com/1920x1080") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay with opacity */
+    z-index: 1;
+    transition: background 0.5s ease-in-out;
+}
+
+.hero-section:hover::before {
+    background: rgba(0, 0, 0, 0.6); /* Darken overlay on hover */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem; /* Large title font size */
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif; /* Serif font for a classic touch */
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: slideInDown 1s ease-in-out; /* Slide-in animation */
+}
+
+.hero-subtitle {
+    font-size: 1.25rem; /* Subtitle font size */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    animation: fadeInUp 1.5s ease-in-out; /* Fade-in and slide-up animation */
+}
+
+/* Animations */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Enhanced Hero Buttons */
+.hero-btn {
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Gradient background */
+    border: none;
+    color: #fff;
+    padding: 15px 30px; /* Increase padding for larger buttons */
+    border-radius: 50px; /* Pill shape */
+    font-size: 1.2rem; /* Larger font size */
+    margin: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s, color 0.3s; /* Smooth transitions */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 8px 15px rgba(0, 114, 255, 0.3); /* Soft shadow */
+    cursor: pointer;
+    will-change: transform, box-shadow, background;
+}
+
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff, #ff6ec4);
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px; /* Match the button's border radius */
+}
+
+.hero-btn:hover {
+    transform: translateY(-8px) scale(1.05); /* Lift the button */
+    box-shadow: 0 12px 24px rgba(0, 114, 255, 0.5); /* Deeper shadow on hover */
+    color: #f8f9fa; /* Lighter text on hover */
+}
+
+.hero-btn:active {
+    transform: scale(0.95); /* Slight shrink on click */
+    box-shadow: 0 4px 8px rgba(0, 114, 255, 0.5); /* Reduced shadow on click */
+}
+
+.hero-btn:hover::before {
+    opacity: 1; /* Make the glow more visible on hover */
+    background: linear-gradient(135deg, #00c6ff, #0072ff, #ff6ec4, #f72585); /* More colors in gradient */
+}
+
+/* Ripple Effect on Click */
+.hero-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s, opacity 1s;
+    z-index: 0;
+}
+
+.hero-btn:active::after {
+    transform: translate(-50%, -50%) scale(4); /* Expand ripple */
+    opacity: 0; /* Fade out ripple */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem; /* Smaller title on mobile */
+    }
+
+    .hero-subtitle {
+        font-size: 1rem; /* Smaller subtitle on mobile */
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-btn {
+        width: 100%;
+        margin-top: 30px; /* Increase margin between buttons */
+    }
+    
+    .hero-buttons .hero-btn:last-child {
+        margin-bottom: 0; /* Remove extra margin after the last button */
+    }
+}
+
+/* Carousel Styles */
+.carousel-inner {
+    height: 600px; /* Match the height of the images */
+}
+
+.carousel-item img {
+    border-radius: 15px; /* Add rounded corners to carousel images */
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.2);
+}
+
+.carousel-img {
+    object-fit: cover;
+    height: 600px; /* Adjust the height as needed */
+    cursor: pointer;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav-button {
+    background-color: white;
+    border: none;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Custom Styles for Accordions */
+#impactAccordion .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+#impactAccordion .card-header {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0;
+}
+
+#impactAccordion .btn-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+}
+
+#impactAccordion .btn-link:hover {
+    color: #0056b3;
+}
+
+#impactAccordion .arrow {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+#impactAccordion .collapse.show .arrow {
+    transform: rotate(180deg);
+}
+
+#impactAccordion .card-body {
+    padding: 1rem;
+}
+
+/* About Section */
+.bg-gradient-light {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.bg-gradient-light .btn {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Speech Bubble */
+.speech-bubble {
+    position: relative;
+    background: #00aabb;
+    color: white;
+    border-radius: 30px;
+    padding: 20px 30px;
+    max-width: 350px;
+    min-height: 120px;
+    display: inline-block;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+    font-size: 1.8rem;
+    font-weight: 450;
+    margin-bottom: 75px; /* Adjust as needed for desired spacing */
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Left-aligned speech bubble */
+.speech-bubble-left {
+    margin-right: auto;
+    margin-left: 15%;
+}
+
+.speech-bubble-left::after {
+    border-width: 40px 40px 0 0;
+    border-color: #00aabb transparent transparent transparent;
+    bottom: -8px;
+    left: 35px;
+    transform: rotate(-129deg);
+}
+
+/* Right-aligned speech bubble */
+.speech-bubble-right {
+    margin-left: auto;
+    margin-right: 15%;
+}
+
+.speech-bubble-right::after {
+    border-width: 40px 0 0 40px;
+    border-color: transparent transparent transparent #00aabb;
+    bottom: -8px;
+    right: 35px;
+    transform: rotate(-51deg);
+}
+
+/* Parallax Background */
+.parallax {
+    background: url("images/Ad%20Play%20and%20pitch.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    z-index: 1;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with opacity */
+    z-index: 2;
+}
+
+.parallax .container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Animation for hero header text */
+.hero-text {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Styles for Carousel Animation */
+.animate-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Hide Mobile Menu by default */
+#mobile-menu.hidden {
+    display: none;
+}
+
+/* Card Styles */
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-body {
+    background-color: #ffffff;
+}
+
+.card-body img {
+    border-radius: 15px;
+}
+
+.card-body p {
+    font-size: 1.125rem;
+    color: #333;
+}
+
+.card-body h6 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+.bg-gradient-dark {
+    background: linear-gradient(to right, #343a40, #000);
+}
+
+footer {
+    color: #fff;
+}
+
+.header-section {
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)),
+                url("https://via.placeholder.com/1920x1080") no-repeat center center;
+    background-size: contai;
+    height: 40vh;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
