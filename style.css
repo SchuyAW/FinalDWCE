@@ -188,7 +188,16 @@ textarea#commentInput {
 
 .hero-buttons {
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px; /* Space between buttons */
     animation: fadeInUp 1.5s ease-in-out; /* Fade-in and slide-up animation */
+}
+
+@media (min-width: 768px) {
+    .hero-buttons {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for wider screens */
+    }
 }
 
 /* Animations */
@@ -228,10 +237,10 @@ textarea#commentInput {
     background: linear-gradient(135deg, #00c6ff, #0072ff); /* Gradient background */
     border: none;
     color: #fff;
-    padding: 15px 30px; /* Increase padding for larger buttons */
+    padding: 20px 40px; /* Increased padding for larger buttons */
     border-radius: 50px; /* Pill shape */
-    font-size: 1.2rem; /* Larger font size */
-    margin: 15px;
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold; /* Make the text bolder */
     text-transform: uppercase;
     letter-spacing: 1.5px;
     transition: background 0.4s, transform 0.3s, box-shadow 0.3s, color 0.3s; /* Smooth transitions */
@@ -241,6 +250,10 @@ textarea#commentInput {
     box-shadow: 0 8px 15px rgba(0, 114, 255, 0.3); /* Soft shadow */
     cursor: pointer;
     will-change: transform, box-shadow, background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Uniform height for consistency */
 }
 
 .hero-btn::before {
@@ -259,7 +272,7 @@ textarea#commentInput {
 }
 
 .hero-btn:hover {
-    transform: translateY(-8px) scale(1.05); /* Lift the button */
+    transform: translateY(-8px) scale(1.1); /* Increase lift and scale on hover */
     box-shadow: 0 12px 24px rgba(0, 114, 255, 0.5); /* Deeper shadow on hover */
     color: #f8f9fa; /* Lighter text on hover */
 }
@@ -355,62 +368,6 @@ textarea#commentInput {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-    z-index: 50;
-}
-
-.modal-content {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-.modal.show {
-    display: flex;
-}
-
-/* Lightbox Styles */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 50;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
 /* Custom Styles for Accordions */
 #impactAccordion .card {
     border: none;
@@ -430,24 +387,31 @@ textarea#commentInput {
     font-weight: bold;
     text-decoration: none;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
 }
 
 #impactAccordion .btn-link:hover {
     color: #0056b3;
 }
 
+/* Arrow rotation */
 #impactAccordion .arrow {
     font-size: 1.25rem;
     transition: transform 0.3s ease;
 }
 
-#impactAccordion .collapse.show .arrow {
+#impactAccordion .arrow.rotate {
     transform: rotate(180deg);
 }
 
 #impactAccordion .card-body {
     padding: 1rem;
 }
+
 
 /* About Section */
 .bg-gradient-light {
@@ -459,22 +423,31 @@ textarea#commentInput {
     color: #fff;
 }
 
-/* Speech Bubble */
+/* speech bubble Container Styling */
+.speech-bubbble-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* General Speech Bubble Styling */
 .speech-bubble {
     position: relative;
     background: #00aabb;
     color: white;
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 20px 30px;
-    max-width: 350px;
-    min-height: 120px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: left;
     display: inline-block;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
-    font-size: 1.8rem;
-    font-weight: 450;
-    margin-bottom: 75px; /* Adjust as needed for desired spacing */
+    width: 90%; /* Keep the width consistent */
+    word-wrap: break-word;
+    height: auto; /* Ensure the height adjusts according to content */
 }
 
+/* Tail Styling */
 .speech-bubble::after {
     content: "";
     position: absolute;
@@ -483,32 +456,44 @@ textarea#commentInput {
     border-style: solid;
 }
 
-/* Left-aligned speech bubble */
-.speech-bubble-left {
-    margin-right: auto;
-    margin-left: 15%;
-}
-
+/* Tail Position for Left Bubbles */
 .speech-bubble-left::after {
-    border-width: 40px 40px 0 0;
+    border-width: 50px 20px 0 20px;
     border-color: #00aabb transparent transparent transparent;
-    bottom: -8px;
-    left: 35px;
-    transform: rotate(-129deg);
+    bottom: -33px;
+    left: 10%; /* Positioning tail 10% from the left edge of the bubble */
+    transform: rotate(35deg);
 }
 
-/* Right-aligned speech bubble */
-.speech-bubble-right {
-    margin-left: auto;
-    margin-right: 15%;
-}
-
+/* Tail Position for Right Bubbles */
 .speech-bubble-right::after {
-    border-width: 40px 0 0 40px;
-    border-color: transparent transparent transparent #00aabb;
-    bottom: -8px;
-    right: 35px;
-    transform: rotate(-51deg);
+    border-width: 50px 20px 0 20px;
+    border-color: #00aabb transparent transparent transparent;
+    bottom: -33px;
+    right: 10%; /* Positioning tail 10% from the right edge of the bubble */
+    transform: rotate(-35deg);
+}
+
+/* Tail Position for Center Bubble */
+.speech-bubble-center::after {
+    border-width: 50px 20px 0 20px;
+    border-color: #00aabb transparent transparent transparent;
+    bottom: -33px;
+    left: 90%; /* Positioning tail in the center of the bubble */
+    transform: translateX(-50%) rotate(-35deg);
+}
+
+/* Adjust row height to prevent bubbles from overlapping */
+.row {
+    align-items: flex-start; /* Align bubbles to the top */
+    margin-bottom: 20px; /* Add margin between rows */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .speech-bubble {
+        max-width: 90%; /* Maintain consistent width */
+    }
 }
 
 /* Parallax Background */
@@ -610,4 +595,106 @@ footer {
     justify-content: center;
     position: relative;
     overflow: hidden;
+}
+
+/* Custom CSS for History Section */
+.history-section {
+    background: linear-gradient(to right, #f0f8ff, #e6e6e6); /* Background */
+    padding: 60px 0;
+}
+
+.timeline-wrapper {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 15%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #007bff;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-year {
+    position: relative;
+    left: -90%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.timeline-content {
+    margin-left: 190px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.timeline-content-wrapper {
+    width: 70%;
+}
+
+.img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px; /* Space between text and image */
+}
+
+.img-overlay img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease;
+}
+
+.img-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.img-overlay:hover .overlay {
+    opacity: 1;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004494;
+}
+
+.normal-header {
+    position: relative;
+    padding-top: 100px;
 }
