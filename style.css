@@ -35,7 +35,9 @@ body {
     font-weight: bold; /* Make text bold */
     font-size: 1.2rem; /* Slightly larger font size */
     box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    transition:
+        background-color 0.3s,
+        transform 0.3s; /* Smooth transitions */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +82,9 @@ body {
     margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
 }
 
 .comment-box:hover {
@@ -122,7 +126,6 @@ textarea#commentInput {
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for better visual appearance */
 }
 
-
 /* Style for comment boxes */
 .comment-box:nth-child(odd) {
     background-color: #f9f9f9;
@@ -134,8 +137,9 @@ textarea#commentInput {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)),
-                url("https://via.placeholder.com/1920x1080") no-repeat center center;
+    background:
+        linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)),
+        url("https://via.placeholder.com/1920x1080") no-repeat center center;
     background-size: cover;
     height: 100vh;
     color: #fff;
@@ -171,7 +175,7 @@ textarea#commentInput {
 .hero-title {
     font-size: 4rem; /* Large title font size */
     margin-bottom: 20px;
-    font-family: 'Roboto Slab', serif; /* Serif font for a classic touch */
+    font-family: "Roboto Slab", serif; /* Serif font for a classic touch */
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -243,7 +247,11 @@ textarea#commentInput {
     font-weight: bold; /* Make the text bolder */
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    transition: background 0.4s, transform 0.3s, box-shadow 0.3s, color 0.3s; /* Smooth transitions */
+    transition:
+        background 0.4s,
+        transform 0.3s,
+        box-shadow 0.3s,
+        color 0.3s; /* Smooth transitions */
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -257,7 +265,7 @@ textarea#commentInput {
 }
 
 .hero-btn::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -2px;
     left: -2px;
@@ -289,7 +297,7 @@ textarea#commentInput {
 
 /* Ripple Effect on Click */
 .hero-btn::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -299,7 +307,9 @@ textarea#commentInput {
     opacity: 0;
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s, opacity 1s;
+    transition:
+        transform 0.5s,
+        opacity 1s;
     z-index: 0;
 }
 
@@ -327,7 +337,7 @@ textarea#commentInput {
         width: 100%;
         margin-top: 30px; /* Increase margin between buttons */
     }
-    
+
     .hero-buttons .hero-btn:last-child {
         margin-bottom: 0; /* Remove extra margin after the last button */
     }
@@ -411,7 +421,6 @@ textarea#commentInput {
 #impactAccordion .card-body {
     padding: 1rem;
 }
-
 
 /* About Section */
 .bg-gradient-light {
@@ -584,8 +593,9 @@ footer {
 }
 
 .header-section {
-    background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)),
-                url("https://via.placeholder.com/1920x1080") no-repeat center center;
+    background:
+        linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)),
+        url("https://via.placeholder.com/1920x1080") no-repeat center center;
     background-size: contai;
     height: 40vh;
     color: #fff;
@@ -697,4 +707,412 @@ footer {
 .normal-header {
     position: relative;
     padding-top: 100px;
+}
+
+/* Key Points Section */
+.key-points-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.key-points-heading {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.key-points-list {
+    margin-bottom: 1.5rem;
+}
+
+.cta-alert {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 8px;
+}
+
+.cta-alert h4 {
+    margin: 0;
+}
+
+.cta-button {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.cta-button:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Info Card */
+.info-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Blocks */
+.content-block {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the block */
+    margin-bottom: 20px; /* Space between blocks */
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s; /* Smooth transitions */
+}
+
+.content-block:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.content-block h2 {
+    font-size: 2rem; /* Heading size */
+    margin-bottom: 15px; /* Space below heading */
+    color: #007bff; /* Primary color for headings */
+}
+
+.content-block p {
+    font-size: 1rem; /* Standard font size for text */
+    color: #333; /* Dark color for readability */
+    line-height: 1.6; /* Line spacing for readability */
+}
+
+/* Content Block Images */
+.content-block img {
+    width: 100%; /* Responsive width */
+    border-radius: 10px; /* Rounded corners to match block */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s; /* Smooth transitions */
+}
+
+.content-block img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between images */
+}
+
+.image-gallery img {
+    flex: 1;
+    min-width: calc(33.333% - 15px); /* Responsive width for 3 columns */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s; /* Smooth transitions */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .image-gallery img {
+        min-width: calc(50% - 15px); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-gallery img {
+        min-width: 100%; /* 1 column on small screens */
+    }
+}
+
+/* Text Over Image */
+.text-over-image {
+    position: relative;
+}
+
+.text-over-image img {
+    display: block;
+    width: 100%; /* Full width */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.text-over-image .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+}
+
+.text-over-image .text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.text-over-image .text p {
+    font-size: 1rem;
+}
+
+/* Hero Section Styling */
+.content-hero-section {
+    position: relative; /* Necessary for absolute positioning of pseudo-element */
+    background-image: url("images/construction__demolition_cd_waste-2182260972.jpg"); /* Update with actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.content-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherit the background image from the parent */
+    filter: blur(2px); /* Adjust blur intensity as needed */
+    z-index: 1; /* Ensure it's behind the text content */
+}
+
+.content-hero-section h1,
+.content-hero-section p {
+    position: relative; /* Ensure text is above the pseudo-element */
+    z-index: 2; /* Ensure text is above the pseudo-element */
+}
+
+.content-hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.content-hero-section p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Section Styling */
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.content-block {
+    margin-bottom: 3rem; /* Increased margin for better separation between blocks */
+    padding: 1.5rem; /* Added padding for more space inside each block */
+    background-color: #f8f9fa; /* Light background color for better contrast */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better focus */
+    overflow: hidden; /* Clearfix for floated elements */
+}
+
+.content-heading {
+    font-size: 2.5rem; /* Larger heading for better prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #343a40; /* Darker color for better contrast */
+    margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+.content-text {
+    font-size: 1.125rem; /* Slightly larger text for better readability */
+    line-height: 1.6; /* Increased line height for better text readability */
+    margin-bottom: 1.5rem; /* Increased margin for better spacing */
+    color: #495057; /* Slightly lighter color for better readability */
+}
+
+.image-wrapper {
+    margin: 1.5rem 0; /* Increased margin for better spacing */
+}
+
+.image-align-left {
+    float: left;
+    margin-right: 1.5rem; /* Margin to separate image from text */
+    max-width: 40%; /* Control image size */
+    clear: both; /* Ensure image does not overlap other floats */
+}
+
+.image-align-right {
+    float: right;
+    margin-left: 1.5rem; /* Margin to separate image from text */
+    max-width: 40%; /* Control image size */
+    clear: both; /* Ensure image does not overlap other floats */
+}
+
+.img-fluid {
+    max-width: 100%; /* Make sure images are responsive and do not overflow their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.content-link {
+    color: #007bff; /* Primary link color */
+    text-decoration: none;
+    font-weight: bold; /* Make links stand out */
+}
+
+.content-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker color on hover for better visibility */
+}
+
+/* Children Styles */
+
+.children-hero-section {
+    position: relative; /* Necessary for absolute positioning of pseudo-element */
+    background-image: url("images/th-2681608410.jpg"); /* Update with actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.children-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherit the background image from the parent */
+    filter: blur(2px); /* Adjust blur intensity as needed */
+    z-index: 1; /* Ensure it's behind the text content */
+}
+
+.children-hero-section h1,
+.children-hero-section p {
+    position: relative; /* Ensure text is above the pseudo-element */
+    z-index: 2; /* Ensure text is above the pseudo-element */
+}
+
+.children-hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.children-hero-section p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-inline {
+    float: left;
+    margin-right: 1rem;
+    width: 100%; /* Full width of the container */
+    max-width: 300px; /* Maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card-body p {
+    text-align: justify;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.card-body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+        .card-img-right {
+            float: right;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            max-width: 40%;
+            height: auto;
+            clear: both;
+        }
+
+        .card-body::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 767px) {
+            .card-img-right {
+                float: none;
+                display: block;
+                margin: 0 auto 1rem;
+                max-width: 100%;
+            }
+        }
+
+.children-impact-card,
+.council-improvements-card,
+.health-implications-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.children-impact-card .card-header,
+.council-improvements-card .card-header,
+.health-implications-card .card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.children-impact-btn,
+.vote-no-btn {
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+}
+
+.btn-primary.children-impact-btn {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary.children-impact-btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger.vote-no-btn {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger.vote-no-btn:hover {
+    background-color: #c82333;
 }
