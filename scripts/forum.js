@@ -4,13 +4,13 @@ import { getFirestore, collection, addDoc, query, orderBy, getDocs, serverTimest
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_FIREBASE_API_KEY",
-    authDomain: "YOUR_FIREBASE_AUTH_DOMAIN",
-    projectId: "YOUR_FIREBASE_PROJECT_ID",
-    storageBucket: "YOUR_FIREBASE_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_FIREBASE_MESSAGING_SENDER_ID",
-    appId: "YOUR_FIREBASE_APP_ID",
-    measurementId: "YOUR_FIREBASE_MEASUREMENT_ID"
+    apiKey: "AIzaSyCKfdSygmE426hqz-KeH4INx3W2yZ8KgBc",
+    authDomain: "dwce-f884a.firebaseapp.com",
+    projectId: "dwce-f884a",
+    storageBucket: "dwce-f884a.appspot.com",
+    messagingSenderId: "866581911640",
+    appId: "1:866581911640:web:1367b07d872ed49deed22d",
+    measurementId: "G-NPMJNWS7SD"
 };
 
 // Initialize Firebase
@@ -82,12 +82,6 @@ async function loadComments() {
             commentTextElement.className = 'comment-text';
             commentTextElement.textContent = data.text;
             commentContent.appendChild(commentTextElement);
-
-            // Add a reply button
-            const replyButton = document.createElement('button');
-            replyButton.className = 'comment-reply';
-            replyButton.textContent = 'Reply';
-            commentContent.appendChild(replyButton);
 
             commentElement.appendChild(commentContent);
             commentsContainer.appendChild(commentElement);
