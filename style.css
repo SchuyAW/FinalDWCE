@@ -1116,3 +1116,195 @@ footer {
 .btn-danger.vote-no-btn:hover {
     background-color: #c82333;
 }
+
+/* consultation Styling */
+
+/* Hero Section */
+.consult-hero-section {
+    background: linear-gradient(to right, #007bff, #008b);
+    padding: 150px 0;
+    position: relative;
+    text-align: center;
+}
+
+.consult-hero-section .container h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.consult-hero-section .container p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.consult-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.);
+    z-index: 1;
+}
+
+/* Content Section */
+.consult-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consult-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.consult-card-header {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 15px;
+}
+
+.consult-card-body {
+    padding: 20px;
+}
+
+/* Call to Action Button */
+.consult-vote-no-btn {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.consult-vote-no-btn:hover {
+    background-color: #0056b3;
+}
+
+/* What can you do? */
+/* Container for content specific to planning objections */
+.objection-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Enhanced section styling */
+.objection-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Section headers with enhanced visibility */
+.objection-heading h1,
+.objection-heading h2 {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.objection-heading h1 {
+    font-size: 2.5rem;
+}
+
+.objection-heading h2 {
+    font-size: 2rem;
+    border-bottom: 4px solid #007bff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Decorative elements for sections */
+.objection-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10px;
+    background-color: #007bff;
+    border-radius: 10px 0 0 10px;
+}
+
+.objection-section .section-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+/* Button styling */
+.objection-button {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.objection-button:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    transform: scale(1.05);
+}
+
+/* List group styling */
+.objection-list-group .list-group-item {
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px;
+    background-color: #ececec; /* Light blue background for list items */
+    color: #1e5c9d; /* Matching text color with background */
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.objection-list-group .list-group-item:hover {
+    background-color: #cce4ff; /* Slightly darker blue on hover */
+    color: #000000; /* Darker text color on hover */
+    transform: translateX(5px);
+}
+
+/* Link styling */
+.objection-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.objection-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .objection-heading h1 {
+        font-size: 2rem;
+    }
+
+    .objection-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .objection-button {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}
