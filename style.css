@@ -545,7 +545,7 @@ textarea#commentInput {
 .parallax {
     background: url("images/index/Ad%20Play%20and%20pitch.jpg") no-repeat center center fixed;
     background-size: cover;
-    height: 100vh; /* Full viewport height */
+    height: 75vh; /* Full viewport height */
     position: relative;
     z-index: 1;
 }
